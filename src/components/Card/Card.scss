@@ -1,0 +1,114 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    background-color: hsl(0, 0%, 100%);
+
+    width: 20rem;
+    padding: 1.5rem;
+
+    border-radius: 1rem;
+    border: 1px solid hsl(0, 0%, 7%);
+    box-shadow: 0.5rem 0.5rem 0 0 hsl(0, 0%, 7%);
+
+    &>img {
+        width: 100%;
+        height: 200px;
+
+        border-radius: 1rem;
+    }
+
+    &__imgArticle {
+        object-fit: cover;
+    }
+
+    &__content {
+
+        &__tag {
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: capitalize;
+            font-size: 0.8rem;
+
+            color: hsl(0, 0%, 7%);
+            background-color: hsl(47, 88%, 63%);
+
+            padding: 0.5rem 0.8rem;
+            border-radius: 0.3rem;
+        }
+
+        &__date {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            font-size: 0.8rem;
+        }
+
+        &__title {
+            cursor: pointer;
+            font-size: 1.3rem;
+            margin: 0.8rem 0;
+            font-weight: 800;
+            transition: 300ms ease-in-out;
+
+            &:hover {
+                color: hsl(47, 88%, 63%);
+            }
+        }
+
+        &__description {
+            color: hsl(0, 0%, 42%);
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+    }
+
+    &__author {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 0.8rem;
+
+        &__avatar {
+            width: 30px;
+        }
+
+        &__name {
+            font-weight: 800;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .card {
+        width: 25rem;
+        gap: 2rem;
+
+        &__content {
+            &__tag {
+                font-size: 1rem;
+            }
+            &__date {
+                font-size: 1rem;
+            }
+            &__title {
+                font-size: 1.6rem;
+            }
+            &__description {
+                font-size: 1rem;
+            }
+        }
+        &__author {
+            &__avatar {
+                width: 40px;
+            }
+            &__name {
+                font-size: 1.1rem;
+            }
+        }
+    }
+    
+}
